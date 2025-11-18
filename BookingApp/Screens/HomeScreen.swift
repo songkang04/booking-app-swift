@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 10) {
             ScrollView {
                 VStack(spacing: 16) {
                     // Featured Banner
@@ -16,7 +16,7 @@ struct HomeScreen: View {
                                     .foregroundColor(AppColors.primaryBlue)
                             }
                         )
-                        .padding(.horizontal, 16)
+                        .padding( 16)
                     
                     // Sample content
                     VStack(spacing: 12) {
