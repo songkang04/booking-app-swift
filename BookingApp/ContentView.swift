@@ -23,19 +23,34 @@ struct ContentView: View {
                     switch selectedTab {
                     case .home:
                         HomeScreen()
+                            .onAppear {
+                                print("📱 [DEBUG] HomeScreen appeared")
+                            }
                     case .search:
                         SearchScreen()
+                            .onAppear {
+                                print("📱 [DEBUG] SearchScreen appeared")
+                            }
                     case .profile:
                         ProfileScreen()
+                            .onAppear {
+                                print("📱 [DEBUG] ProfileScreen appeared")
+                            }
                     }
                 }
                 .transition(.opacity)
+                .onChange(of: selectedTab) { oldValue, newValue in
+                    print("📱 [DEBUG] Tab changed from \(oldValue) to \(newValue)")
+                }
                 
                 // Bottom Tab Bar
                 BottomTabBar(selectedTab: $selectedTab)
             }
         }
         .background(AppColors.background)
+        .onAppear {
+            print("📱 [DEBUG] ContentView appeared - Initial tab: \(selectedTab)")
+        }
     }
 }
 

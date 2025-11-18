@@ -52,6 +52,9 @@ struct SearchScreen: View {
             }
         }
         .background(AppColors.background)
+        .onAppear {
+            print("🔎 [DEBUG] SearchScreen appeared")
+        }
     }
 }
 

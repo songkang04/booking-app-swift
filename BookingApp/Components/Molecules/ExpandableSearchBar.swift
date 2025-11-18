@@ -12,8 +12,10 @@ struct ExpandableSearchBar: View {
                 
                 if isSearching {
                     Button("Cancel") {
+                        print("🔍 [DEBUG] Cancel button pressed in ExpandableSearchBar")
                         searchText = ""
                         isSearching = false
+                        print("🔍 [DEBUG] Search dismissed, isSearching set to false")
                         onDismiss()
                     }
                     .font(.system(size: 16, weight: .regular))

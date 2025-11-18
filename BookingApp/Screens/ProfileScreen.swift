@@ -65,6 +65,9 @@ struct ProfileScreen: View {
             .padding(.top, 16)
         }
         .background(AppColors.background)
+        .onAppear {
+            print("👤 [DEBUG] ProfileScreen appeared")
+        }
     }
 }
 

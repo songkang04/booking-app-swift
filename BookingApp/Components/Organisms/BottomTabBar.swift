@@ -12,24 +12,36 @@ struct BottomTabBar: View {
                 TabBarItem(
                     tab: .home,
                     isSelected: selectedTab == .home,
-                    action: { selectedTab = .home }
+                    action: {
+                        print("📍 [DEBUG] Home tab tapped")
+                        selectedTab = .home
+                    }
                 )
                 
                 TabBarItem(
                     tab: .search,
                     isSelected: selectedTab == .search,
-                    action: { selectedTab = .search }
+                    action: {
+                        print("📍 [DEBUG] Search tab tapped")
+                        selectedTab = .search
+                    }
                 )
                 
                 TabBarItem(
                     tab: .profile,
                     isSelected: selectedTab == .profile,
                     notificationCount: profileNotificationCount,
-                    action: { selectedTab = .profile }
+                    action: {
+                        print("📍 [DEBUG] Profile tab tapped")
+                        selectedTab = .profile
+                    }
                 )
             }
             .frame(height: 60)
             .background(AppColors.tabBarBackground)
+        }
+        .onChange(of: selectedTab) { oldValue, newValue in
+            print("📍 [DEBUG] BottomTabBar: selectedTab changed from \(oldValue) to \(newValue)")
         }
     }
 }
