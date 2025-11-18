@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @State private var photos: [Photo] = []
+    @State private var homestays: [Homestay] = []
     @State private var isLoading = true
     @State private var errorMessage: String?
     
@@ -9,25 +9,86 @@ struct HomeScreen: View {
         VStack(spacing: 10) {
             ScrollView {
                 VStack(spacing: 16) {
-                    // Featured Banner
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(AppColors.lightBlue)
-                        .frame(height: 200)
-                        .overlay(
-                            VStack {
-                                Text("Welcome Home")
-                                    .font(.system(size: 24, weight: .bold))
-                                    .foregroundColor(AppColors.primaryBlue)
-                            }
+                    // Featured Banner - Welcome Section
+                    ZStack {
+                        // Background with gradient
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                AppColors.primaryBlue.opacity(0.8),
+                                AppColors.primaryBlue.opacity(0.6)
+                            ]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
                         )
-                        .padding(16)
+                        
+                        // Decorative circles
+                        Circle()
+                            .fill(AppColors.primaryBlue.opacity(0.1))
+                            .frame(width: 150, height: 150)
+                            .offset(x: 80, y: -40)
+                        
+                        Circle()
+                            .fill(AppColors.primaryBlue.opacity(0.15))
+                            .frame(width: 100, height: 100)
+                            .offset(x: -70, y: 50)
+                        
+                        // Content
+                        VStack(alignment: .leading, spacing: 12) {
+                            HStack(spacing: 8) {
+                                Image(systemName: "sparkles")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.white)
+                                
+                                Text("Welcome!")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.white)
+                                
+                                Spacer()
+                            }
+                            
+                            Text("Discover amazing homestays and start your adventure")
+                                .font(.system(size: 14, weight: .regular))
+                                .foregroundColor(.white.opacity(0.9))
+                                .lineLimit(2)
+                            
+                            HStack(spacing: 20) {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text("500+")
+                                        .font(.system(size: 16, weight: .bold))
+                                        .foregroundColor(.white)
+                                    Text("Properties")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(.white.opacity(0.8))
+                                }
+                                
+                                Divider()
+                                    .frame(height: 30)
+                                    .opacity(0.5)
+                                
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text("4.8★")
+                                        .font(.system(size: 16, weight: .bold))
+                                        .foregroundColor(.white)
+                                    Text("Rating")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(.white.opacity(0.8))
+                                }
+                                
+                                Spacer()
+                            }
+                        }
+                        .padding(20)
+                    }
+                    .frame(height: 180)
+                    .cornerRadius(16)
+                    .padding(16)
                     
                     // Loading State
                     if isLoading {
                         VStack {
                             ProgressView()
                                 .tint(AppColors.primaryBlue)
-                            Text("Loading photos...")
+                            Text("Loading homestays...")
                                 .foregroundColor(AppColors.textSecondary)
                         }
                         .frame(maxWidth: .infinity)
@@ -46,7 +107,7 @@ struct HomeScreen: View {
                                 .font(.system(size: 14))
                                 .foregroundColor(AppColors.textSecondary)
                             
-                            Button(action: loadPhotos) {
+                            Button(action: loadHomestays) {
                                 Text("Retry")
                                     .font(.system(size: 14, weight: .semibold))
                                     .foregroundColor(.white)
@@ -59,27 +120,25 @@ struct HomeScreen: View {
                         .padding(16)
                     }
                     
-                    // Photos Grid
-                    if !photos.isEmpty {
-                        VStack(spacing: 12) {
-                            Text("Latest Photos")
+                    // Homestays Horizontal Scroll
+                    if !homestays.isEmpty {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text("Latest Homestays")
                                 .font(.system(size: 18, weight: .bold))
                                 .foregroundColor(AppColors.textPrimary)
-                                .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.horizontal, 16)
                             
-                            LazyVGrid(
-                                columns: [
-                                    GridItem(.flexible(), spacing: 12),
-                                    GridItem(.flexible(), spacing: 12)
-                                ],
-                                spacing: 12
-                            ) {
-                                ForEach(photos) { photo in
-                                    PhotoCard(photo: photo)
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 16) {
+                                    ForEach(homestays) { homestay in
+                                        HomestayCard(homestay: homestay)
+                                            .frame(width: 280)
+                                    }
                                 }
+                                .padding(.horizontal, 16)
+                                .padding(.bottom, 16)
                             }
-                            .padding(.horizontal, 16)
+                            .padding(.bottom, 16)
                         }
                     }
                 }
@@ -87,32 +146,32 @@ struct HomeScreen: View {
         }
         .background(AppColors.background)
         .onAppear {
-            loadPhotos()
+            loadHomestays()
         }
     }
     
-    private func loadPhotos() {
-        print("🏠 [DEBUG] HomeScreen.loadPhotos() started")
+    private func loadHomestays() {
+        print("🏠 [HomeScreen] Starting to load homestays...")
         Task {
             isLoading = true
             errorMessage = nil
-            print("🏠 [DEBUG] Loading state set to true")
             
             do {
-                print("🏠 [DEBUG] Fetching photos from API...")
-                let fetchedPhotos = try await APIService.shared.fetchPhotos(limit: 10)
-                print("🏠 [DEBUG] Fetched \(fetchedPhotos.count) photos successfully")
+                print("🏠 [HomeScreen] Calling APIService.fetchHomestays()...")
+                let fetchedHomestays = try await APIService.shared.fetchHomestays(limit: 10)
+                
+                print("🏠 [HomeScreen] Received \(fetchedHomestays.count) homestays")
+                
                 await MainActor.run {
-                    self.photos = fetchedPhotos
+                    print("🏠 [HomeScreen] Updating UI with \(fetchedHomestays.count) homestays")
+                    self.homestays = fetchedHomestays
                     self.isLoading = false
-                    print("🏠 [DEBUG] Photos updated on main thread, isLoading set to false")
                 }
             } catch {
-                print("🏠 [ERROR] Failed to fetch photos: \(error.localizedDescription)")
+                print("🏠 [HomeScreen] Error loading homestays: \(error.localizedDescription)")
                 await MainActor.run {
                     self.errorMessage = error.localizedDescription
                     self.isLoading = false
-                    print("🏠 [DEBUG] Error state updated on main thread")
                 }
             }
         }

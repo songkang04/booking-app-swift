@@ -1,0 +1,209 @@
+{
+  "" : {
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingApp-primary.dia",
+    "emit-module-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingApp-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingApp-primary-emit-module.dia",
+    "pch" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingApp-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingApp-primary.swiftdeps"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/BookingAppApp.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BookingAppApp~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Atoms/HomestayCard.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomestayCard~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Atoms/LogoBrand.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoBrand~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Atoms/NotificationBadge.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/NotificationBadge~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Atoms/SearchButton.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchButton~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Atoms/SearchField.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchField~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Atoms/TabBarIcon.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarIcon~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Molecules/ExpandableSearchBar.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ExpandableSearchBar~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Molecules/LogoHeader.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/LogoHeader~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Molecules/TabBarItem.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/TabBarItem~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Organisms/AppHeader.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/AppHeader~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Components/Organisms/BottomTabBar.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/BottomTabBar~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/ContentView.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Models/Homestay.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Homestay~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Screens/HomeScreen.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/HomeScreen~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Screens/ProfileScreen.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/ProfileScreen~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Screens/SearchScreen.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/SearchScreen~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Utils/APIService.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/APIService~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/BookingApp/Utils/Colors.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/Colors~partial.swiftmodule"
+  },
+  "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/tiennguyen/Desktop/Work_Dev/BookingApp/build/Build/Intermediates.noindex/BookingApp.build/Debug/BookingApp.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}
