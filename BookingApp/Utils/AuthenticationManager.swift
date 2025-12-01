@@ -15,6 +15,8 @@ class AuthenticationManager: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
+    @Published var requiresOTPVerification: Bool = false
+    @Published var pendingVerificationEmail: String = ""
 
     private let userDefaultsKey = "LoggedInUser"
 
@@ -218,33 +220,16 @@ class AuthenticationManager: ObservableObject {
             print("📊 [AUTH] HTTP Status Code: \(httpResponse.statusCode)")
 
             if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {
-                // Parse response - sign up returns user object directly
-                if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any] {
-                    print("🔍 [AUTH] Response JSON: \(jsonResponse)")
-
-                    if let userId = jsonResponse["_id"] as? String {
-
-                        // Create user object
-                        let user = User(
-                            id: userId,
-                            email: email,
-                            name: firstName,
-                            avatar: jsonResponse["avatar"] as? String
-                        )
-
-                        self.currentUser = user
-                        self.isLoggedIn = true
-                        saveUserToDefaults(user)
-
-                        print("✅ [AUTH] Successfully signed up as \(email) (ID: \(userId))")
-                    } else {
-                        errorMessage = "Invalid response format"
-                        print("❌ [AUTH] Could not parse user ID from response")
-                    }
-                } else {
-                    errorMessage = "Invalid response format"
-                    print("❌ [AUTH] Could not parse JSON response")
+                // Log raw response for debugging
+                if let responseString = String(data: data, encoding: .utf8) {
+                    print("🔍 [AUTH] Raw Response: \(responseString)")
                 }
+
+                // Registration successful - navigate to OTP verification
+                // Accept any valid response (JSON object, array, or even empty)
+                self.pendingVerificationEmail = email
+                self.requiresOTPVerification = true
+                print("✅ [AUTH] Registration successful, OTP verification required for: \(email)")
             } else {
                 // Handle error response
                 if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
@@ -264,10 +249,163 @@ class AuthenticationManager: ObservableObject {
         isLoading = false
     }
 
+    // MARK: - Verify OTP
+    func verifyOTP(email: String, otp: String) async {
+        isLoading = true
+        errorMessage = nil
+
+        print("🔐 [AUTH] Verifying OTP for email: \(email)")
+
+        do {
+            guard let url = URL(string: "http://localhost:3000/api/auth/verify-email-otp") else {
+                errorMessage = "Invalid URL"
+                isLoading = false
+                return
+            }
+
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "accept")
+
+            let requestBody: [String: String] = [
+                "email": email,
+                "otp": otp
+            ]
+
+            request.httpBody = try JSONSerialization.data(withJSONObject: requestBody)
+
+            print("📤 [AUTH] Sending OTP verification request")
+
+            let (data, response) = try await URLSession.shared.data(for: request)
+
+            guard let httpResponse = response as? HTTPURLResponse else {
+                errorMessage = "Invalid response"
+                isLoading = false
+                return
+            }
+
+            print("📊 [AUTH] OTP Verification Status Code: \(httpResponse.statusCode)")
+
+            if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {
+                if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                    print("🔍 [AUTH] OTP Response JSON: \(jsonResponse)")
+
+                    // Try to extract user data from response
+                    var userDict: [String: Any]? = nil
+                    var userId: String? = nil
+                    var firstName: String? = nil
+
+                    // Try different response formats
+                    if let dataDict = jsonResponse["data"] as? [String: Any],
+                       let userObj = dataDict["user"] as? [String: Any] {
+                        userDict = userObj
+                    } else if let userObj = jsonResponse["user"] as? [String: Any] {
+                        userDict = userObj
+                    }
+
+                    if let userDict = userDict {
+                        userId = userDict["_id"] as? String
+                        firstName = userDict["firstName"] as? String ?? userDict["name"] as? String
+                    } else {
+                        userId = jsonResponse["_id"] as? String
+                        firstName = jsonResponse["firstName"] as? String ?? jsonResponse["name"] as? String
+                    }
+
+                    if let userId = userId {
+                        let user = User(
+                            id: userId,
+                            email: email,
+                            name: firstName ?? "User",
+                            avatar: userDict?["avatar"] as? String ?? userDict?["profilePicture"] as? String
+                        )
+
+                        self.currentUser = user
+                        self.isLoggedIn = true
+                        self.requiresOTPVerification = false
+                        self.pendingVerificationEmail = ""
+                        saveUserToDefaults(user)
+
+                        print("✅ [AUTH] OTP verified successfully for \(email)")
+                    } else {
+                        // OTP verified but no user data - just mark as logged in
+                        self.isLoggedIn = true
+                        self.requiresOTPVerification = false
+                        self.pendingVerificationEmail = ""
+                        print("✅ [AUTH] OTP verified successfully")
+                    }
+                }
+            } else {
+                if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                   let message = jsonResponse["message"] as? String {
+                    errorMessage = message
+                } else {
+                    errorMessage = "OTP verification failed"
+                }
+                print("❌ [AUTH] OTP verification failed: HTTP \(httpResponse.statusCode)")
+            }
+        } catch {
+            errorMessage = "OTP verification failed: \(error.localizedDescription)"
+            print("❌ [AUTH] OTP verification error: \(error)")
+        }
+
+        isLoading = false
+    }
+
+    // MARK: - Resend OTP
+    func resendOTP(email: String) async {
+        isLoading = true
+        errorMessage = nil
+
+        print("📤 [AUTH] Resending OTP to email: \(email)")
+
+        do {
+            guard let url = URL(string: "http://localhost:3000/api/auth/resend-otp") else {
+                errorMessage = "Invalid URL"
+                isLoading = false
+                return
+            }
+
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.setValue("application/json", forHTTPHeaderField: "accept")
+
+            let requestBody: [String: String] = ["email": email]
+            request.httpBody = try JSONSerialization.data(withJSONObject: requestBody)
+
+            let (data, response) = try await URLSession.shared.data(for: request)
+
+            guard let httpResponse = response as? HTTPURLResponse else {
+                errorMessage = "Invalid response"
+                isLoading = false
+                return
+            }
+
+            if httpResponse.statusCode == 200 || httpResponse.statusCode == 201 {
+                print("✅ [AUTH] OTP resent successfully to \(email)")
+            } else {
+                if let jsonResponse = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                   let message = jsonResponse["message"] as? String {
+                    errorMessage = message
+                } else {
+                    errorMessage = "Failed to resend OTP"
+                }
+            }
+        } catch {
+            errorMessage = "Failed to resend OTP: \(error.localizedDescription)"
+            print("❌ [AUTH] Resend OTP error: \(error)")
+        }
+
+        isLoading = false
+    }
+
     // MARK: - Logout
     func logout() {
         currentUser = nil
         isLoggedIn = false
+        requiresOTPVerification = false
+        pendingVerificationEmail = ""
         removeUserFromDefaults()
         print("✅ [AUTH] Successfully logged out")
     }
