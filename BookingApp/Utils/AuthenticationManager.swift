@@ -111,6 +111,17 @@ class AuthenticationManager: ObservableObject {
                         print("📍 [AUTH] Found user at user")
                     }
 
+                    // Extract and save auth token
+                    if let dataDict = jsonResponse["data"] as? [String: Any] {
+                        if let token = dataDict["token"] as? String {
+                            UserDefaults.standard.set(token, forKey: "authToken")
+                            print("🔑 [AUTH] Token saved: \(token.prefix(20))...")
+                        } else if let token = dataDict["accessToken"] as? String {
+                            UserDefaults.standard.set(token, forKey: "authToken")
+                            print("🔑 [AUTH] AccessToken saved: \(token.prefix(20))...")
+                        }
+                    }
+
                     if let userDict = userDict,
                        let userId = userDict["_id"] as? String,
                        let firstName = userDict["firstName"] as? String {
@@ -407,6 +418,7 @@ class AuthenticationManager: ObservableObject {
         requiresOTPVerification = false
         pendingVerificationEmail = ""
         removeUserFromDefaults()
+        UserDefaults.standard.removeObject(forKey: "authToken")
         print("✅ [AUTH] Successfully logged out")
     }
 

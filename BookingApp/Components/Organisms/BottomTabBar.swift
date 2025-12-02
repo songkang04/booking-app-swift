@@ -3,11 +3,11 @@ import SwiftUI
 struct BottomTabBar: View {
     @Binding var selectedTab: Tab
     var profileNotificationCount: Int? = nil
-    
+
     var body: some View {
         VStack(spacing: 0) {
             Divider()
-            
+
             HStack(spacing: 0) {
                 TabBarItem(
                     tab: .home,
@@ -17,7 +17,7 @@ struct BottomTabBar: View {
                         selectedTab = .home
                     }
                 )
-                
+
                 TabBarItem(
                     tab: .search,
                     isSelected: selectedTab == .search,
@@ -26,7 +26,16 @@ struct BottomTabBar: View {
                         selectedTab = .search
                     }
                 )
-                
+
+                TabBarItem(
+                    tab: .bookings,
+                    isSelected: selectedTab == .bookings,
+                    action: {
+                        print("📍 [DEBUG] Bookings tab tapped")
+                        selectedTab = .bookings
+                    }
+                )
+
                 TabBarItem(
                     tab: .profile,
                     isSelected: selectedTab == .profile,

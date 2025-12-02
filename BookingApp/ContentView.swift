@@ -11,13 +11,13 @@ struct ContentView: View {
     @State private var selectedTab: Tab = .home
     @State private var isSearching = false
     @State private var searchText = ""
-    
+
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
                 // Header
                 AppHeader(isSearching: $isSearching, searchText: $searchText)
-                
+
                 // Content
                 ZStack {
                     switch selectedTab {
@@ -31,6 +31,11 @@ struct ContentView: View {
                             .onAppear {
                                 print("📱 [DEBUG] SearchScreen appeared")
                             }
+                    case .bookings:
+                        BookingsListScreen()
+                            .onAppear {
+                                print("📱 [DEBUG] BookingsListScreen appeared")
+                            }
                     case .profile:
                         ProfileScreen()
                             .onAppear {
@@ -42,7 +47,7 @@ struct ContentView: View {
                 .onChange(of: selectedTab) { oldValue, newValue in
                     print("📱 [DEBUG] Tab changed from \(oldValue) to \(newValue)")
                 }
-                
+
                 // Bottom Tab Bar
                 BottomTabBar(selectedTab: $selectedTab)
             }

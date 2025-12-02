@@ -7,7 +7,7 @@ struct LogoBrand: View {
                 .font(.system(size: 24, weight: .bold))
                 .foregroundColor(AppColors.primaryBlue)
             
-            Text("Booking")
+            Text("HomestayGo")
                 .font(.system(size: 20, weight: .bold))
                 .foregroundColor(AppColors.textPrimary)
         }

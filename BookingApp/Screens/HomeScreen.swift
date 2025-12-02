@@ -4,9 +4,9 @@ struct HomeScreen: View {
     @State private var homestays: [Homestay] = []
     @State private var isLoading = true
     @State private var errorMessage: String?
-    
+
     var body: some View {
-        VStack(spacing: 10) {
+        NavigationStack {
             ScrollView {
                 VStack(spacing: 16) {
                     // Featured Banner - Welcome Section
@@ -20,37 +20,37 @@ struct HomeScreen: View {
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing
                         )
-                        
+
                         // Decorative circles
                         Circle()
                             .fill(AppColors.primaryBlue.opacity(0.1))
                             .frame(width: 150, height: 150)
                             .offset(x: 80, y: -40)
-                        
+
                         Circle()
                             .fill(AppColors.primaryBlue.opacity(0.15))
                             .frame(width: 100, height: 100)
                             .offset(x: -70, y: 50)
-                        
+
                         // Content
                         VStack(alignment: .leading, spacing: 12) {
                             HStack(spacing: 8) {
                                 Image(systemName: "sparkles")
                                     .font(.system(size: 20))
                                     .foregroundColor(.white)
-                                
+
                                 Text("Welcome!")
                                     .font(.system(size: 18, weight: .semibold))
                                     .foregroundColor(.white)
-                                
+
                                 Spacer()
                             }
-                            
+
                             Text("Discover amazing homestays and start your adventure")
                                 .font(.system(size: 14, weight: .regular))
                                 .foregroundColor(.white.opacity(0.9))
                                 .lineLimit(2)
-                            
+
                             HStack(spacing: 20) {
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text("500+")
@@ -60,11 +60,11 @@ struct HomeScreen: View {
                                         .font(.system(size: 12))
                                         .foregroundColor(.white.opacity(0.8))
                                 }
-                                
+
                                 Divider()
                                     .frame(height: 30)
                                     .opacity(0.5)
-                                
+
                                 VStack(alignment: .leading, spacing: 4) {
                                     Text("4.8★")
                                         .font(.system(size: 16, weight: .bold))
@@ -73,7 +73,7 @@ struct HomeScreen: View {
                                         .font(.system(size: 12))
                                         .foregroundColor(.white.opacity(0.8))
                                 }
-                                
+
                                 Spacer()
                             }
                         }
@@ -82,7 +82,7 @@ struct HomeScreen: View {
                     .frame(height: 180)
                     .cornerRadius(16)
                     .padding(16)
-                    
+
                     // Loading State
                     if isLoading {
                         VStack {
@@ -94,7 +94,7 @@ struct HomeScreen: View {
                         .frame(maxWidth: .infinity)
                         .padding(32)
                     }
-                    
+
                     // Error State
                     if let errorMessage = errorMessage {
                         VStack {
@@ -106,7 +106,7 @@ struct HomeScreen: View {
                             Text(errorMessage)
                                 .font(.system(size: 14))
                                 .foregroundColor(AppColors.textSecondary)
-                            
+
                             Button(action: loadHomestays) {
                                 Text("Retry")
                                     .font(.system(size: 14, weight: .semibold))
@@ -119,7 +119,7 @@ struct HomeScreen: View {
                         }
                         .padding(16)
                     }
-                    
+
                     // Homestays Horizontal Scroll
                     if !homestays.isEmpty {
                         VStack(alignment: .leading, spacing: 16) {
@@ -127,12 +127,15 @@ struct HomeScreen: View {
                                 .font(.system(size: 18, weight: .bold))
                                 .foregroundColor(AppColors.textPrimary)
                                 .padding(.horizontal, 16)
-                            
+
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 16) {
                                     ForEach(homestays) { homestay in
-                                        HomestayCard(homestay: homestay)
-                                            .frame(width: 280)
+                                        NavigationLink(destination: HomestayDetailScreen(homestayId: homestay.id)) {
+                                            HomestayCard(homestay: homestay)
+                                                .frame(width: 280)
+                                        }
+                                        .buttonStyle(PlainButtonStyle())
                                     }
                                 }
                                 .padding(.horizontal, 16)
@@ -143,25 +146,26 @@ struct HomeScreen: View {
                     }
                 }
             }
+            .navigationBarHidden(true)
         }
         .background(AppColors.background)
         .onAppear {
             loadHomestays()
         }
     }
-    
+
     private func loadHomestays() {
         print("🏠 [HomeScreen] Starting to load homestays...")
         Task {
             isLoading = true
             errorMessage = nil
-            
+
             do {
                 print("🏠 [HomeScreen] Calling APIService.fetchHomestays()...")
                 let fetchedHomestays = try await APIService.shared.fetchHomestays(limit: 10)
-                
+
                 print("🏠 [HomeScreen] Received \(fetchedHomestays.count) homestays")
-                
+
                 await MainActor.run {
                     print("🏠 [HomeScreen] Updating UI with \(fetchedHomestays.count) homestays")
                     self.homestays = fetchedHomestays
